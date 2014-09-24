@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>testtest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#" id="menuHome">Home</a></li>
+          <li><a href="#" id="menuEvents">Events</a></li>
+          <li><a href="#" id="menuMyEvents">My Events</a></li>
+          <li class="dropdown hidden" id="headerUser">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <h3 class="text-muted">Toptal Community</h3>
+
+      </div>
+
+      <div class="jumbotron">
+        <h1>Toptal Community</h1>
+        <p class="lead">This is a sample app demonstrating the usage of Hoodie.</p>
+        <p><button class="btn btn-lg btn-success" id="lnkSignUp" role="button">Sign up and apply for events</button></p>
+        <p><button class="btn btn-lg btn-primary" id="lnkSignIn" role="button">Already a user? Sign in</button></p>
+
+      </div>
+
+      <div class="row" id="signForm" style="display: none;">
+        <div class="col-lg-12">
+          <h4 class="signup" style="display: none;">Sign Up</h4>
+          <h4 class="signin" style="display: none;">Sign In</h4>
+          <form role="form">
+            <div class="form-group">
+              <label for="txtEmail">Email</label>
+              <input type="text" class="form-control" id="txtEmail"></input>
+            </div>
+            <div class="form-group">
+              <label for="txtPassword">Password</label>
+              <input type="password" class="form-control" id="txtPassword" class="control"></input>
+            </div>
+            <button class="btn btn-primary" id="btnSignIn" style="display: none;">Sign In</button>
+            <button class="btn btn-success" id="btnSignUp" style="display: none;">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row" id="events" style="display: none;">
+        <h3>Events</h3>
+        <div class="col-lg-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Event</td>
+                <td>Date</td>
+                <td>Starts at</td>
+                <td>Apply</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-id="1">
+                <td>INNOVATION SERIES: AUCKLAND</td>
+                <td>Sep 23</td>
+                <td>5:30PM</td>
+                <td><button class="btn btn-primary btn-sm btn-apply">Apply</button></td>
+              </tr>
+              <tr data-id="2">
+                <td>COMMUNITY GATHERING: URUGUAY</td>
+                <td>Sep 27</td>
+                <td>7:30PM</td>
+                <td><button class="btn btn-primary btn-sm btn-apply">Apply</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row" id="myEvents" style="display: none;">
+        <h3>My Events</h3>
+        <div class="col-lg-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Event</td>
+                <td>Date</td>
+                <td>Starts at</td>
+                <td>Remove</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>INNOVATION SERIES: AUCKLAND</td>
+                <td>Sep 23</td>
+                <td>5:30PM</td>
+                <td><button class="btn btn-danger btn-sm">Remove</button></td>
+              </tr>
+              <tr>
+                <td>COMMUNITY GATHERING: URUGUAY</td>
+                <td>Sep 27</td>
+                <td>7:30PM</td>
+                <td><button class="btn btn-danger btn-sm">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Create Event</h3>
+          <form role="form">
+            <div class="form-group">
+              <label for="txtName">Name</label>
+              <input type="text" class="form-control" id="txtName" placeholder="Event Name">
+            </div>
+            <div class="form-group">
+              <label for="txtDate">Date</label>
+              <input type="text" class="form-control" id="txtDate" placeholder="Event Date">
+            </div>
+            <div class="form-group">
+              <label for="txtTime">Time</label>
+              <input type="text" class="form-control" id="txtTime" placeholder="Event Time">
+            </div>
+            <button id="btnCreateEvent" class="btn btn-default">Create Event</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; Toptal 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <script src="assets/vendor/js/jquery-2.1.0.min.js"></script>
+    <script src="assets/vendor/js/bootstrap.min.js"></script>
+    <!-- Load the dynamic version of hoodie.js that includes all the plugin code-->
+    <script src="/_api/_files/hoodie.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
